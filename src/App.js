@@ -7,10 +7,16 @@ import Footer from './footer-component/src/App';
 
 class App extends Component {
   render() {
+    let Component;
+
+    if (window.component === 'Header') {
+      Component = Header
+    } else {
+      Component = Footer
+    } 
     return (
       <div className="App">
-        <Header />
-        <Footer />
+        <Component />
       </div>
     );
   }
